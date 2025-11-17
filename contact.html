@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{PROMPT: Write your business name.}} - Contact</title>
+  <link rel="stylesheet" href="assets/css/shared.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .bg-gradient-contact {
+      background: linear-gradient(to bottom, #ffffff, #f9fafb, #ffffff);
+    }
+    .bg-orange-50 {
+      background-color: #fff7ed;
+    }
+    .bg-red-50 {
+      background-color: #fef2f2;
+    }
+    .text-white-90 {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .bg-white-10 {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .bg-white-20 {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    .bg-primary-10 {
+      background-color: rgba(255, 107, 53, 0.1);
+    }
+    .bg-primary-20 {
+      background-color: rgba(255, 107, 53, 0.2);
+    }
+    .bg-secondary-10 {
+      background-color: rgba(247, 127, 0, 0.1);
+    }
+    .bg-accent-10 {
+      background-color: rgba(230, 57, 70, 0.1);
+    }
+    .border-primary-20 {
+      border-color: rgba(255, 107, 53, 0.2);
+    }
+    .text-secondary {
+      color: var(--secondary);
+    }
+    .animate-pulse-delay {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      animation-delay: 1s;
+    }
+    .group:hover .group-hover\:rotate-12 {
+      transform: rotate(12deg);
+    }
+    .group:hover .group-hover\:text-white {
+      color: white;
+    }
+    .group:hover .group-hover\:bg-white-20 {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    .group:hover .group-hover\:scale-100 {
+      transform: scale(1);
+    }
+    .group:hover .group-hover\:translate-x-full {
+      transform: translateX(100%);
+    }
+    .hover\:shadow-3xl:hover {
+      box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.3);
+    }
+    .font-extrabold {
+      font-weight: 800;
+    }
+    .h-1\.5 {
+      height: 0.375rem;
+    }
+    .w-2 {
+      width: 0.5rem;
+    }
+    .h-2 {
+      height: 0.5rem;
+    }
+    .bg-green-400 {
+      background-color: #4ade80;
+    }
+    .-top-40 {
+      top: -10rem;
+    }
+    .-right-40 {
+      right: -10rem;
+    }
+    .-bottom-40 {
+      bottom: -10rem;
+    }
+    .-left-40 {
+      left: -10rem;
+    }
+    .top-20 {
+      top: 5rem;
+    }
+    .right-20 {
+      right: 5rem;
+    }
+    .bottom-20 {
+      bottom: 5rem;
+    }
+    .left-20 {
+      left: 5rem;
+    }
+    .w-72 {
+      width: 18rem;
+    }
+    .h-72 {
+      height: 18rem;
+    }
+    .w-20 {
+      width: 5rem;
+    }
+    .h-20 {
+      height: 5rem;
+    }
+    .h-10 {
+      height: 2.5rem;
+    }
+    .w-10 {
+      width: 2.5rem;
+    }
+    .h-6 {
+      height: 1.5rem;
+    }
+    .w-6 {
+      width: 1.5rem;
+    }
+    .h-7 {
+      height: 1.75rem;
+    }
+    .w-7 {
+      width: 1.75rem;
+    }
+    .h-8 {
+      height: 2rem;
+    }
+    .w-8 {
+      width: 2rem;
+    }
+    .h-4 {
+      height: 1rem;
+    }
+    .w-4 {
+      width: 1rem;
+    }
+    .mr-2 {
+      margin-right: 0.5rem;
+    }
+    .mr-3 {
+      margin-right: 0.75rem;
+    }
+    .mr-4 {
+      margin-right: 1rem;
+    }
+    .ml-1 {
+      margin-left: 0.25rem;
+    }
+    .resize-none {
+      resize: none;
+    }
+    .ring-4 {
+      box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.2);
+    }
+    .focus\:ring-4:focus {
+      box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.2);
+    }
+    .translate-x-20 {
+      transform: translateX(5rem);
+    }
+    .-translate-x-20 {
+      transform: translateX(-5rem);
+    }
+    .-translate-y-20 {
+      transform: translateY(-5rem);
+    }
+    .translate-y-20 {
+      transform: translateY(5rem);
+    }
+    .scale-0 {
+      transform: scale(0);
+    }
+    .scale-150 {
+      transform: scale(1.5);
+    }
+    .-skew-x-12 {
+      transform: skewX(-12deg);
+    }
+    .-translate-x-full {
+      transform: translateX(-100%);
+    }
+    @media (min-width: 768px) {
+      .md\:text-5xl {
+        font-size: 3rem;
+        line-height: 1;
+      }
+    }
+    @media (min-width: 1024px) {
+      .lg\:text-7xl {
+        font-size: 4.5rem;
+        line-height: 1;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gradient-contact">
+  <!-- Header -->
+  <header class="bg-white border-b-4 border-black sticky top-0 z-50 shadow-custom-4">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <div class="text-2xl md:text-3xl font-black uppercase tracking-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          {{PROMPT: Write your business name.}}
+        </div>
+        <nav class="hidden md:block">
+          <ul class="flex space-x-8">
+            <li>
+              <a href="index.html" class="text-black hover:text-primary transition-colors font-bold uppercase text-sm tracking-wide border-b-2 border-transparent hover:border-primary">Home</a>
+            </li>
+            <li class="relative" id="services-dropdown">
+              <button id="services-btn" class="text-black hover:text-primary transition-colors font-bold uppercase text-sm tracking-wide flex items-center border-b-2 border-transparent hover:border-primary">
+                Services
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div id="services-menu" class="absolute top-full left-0 mt-2 w-48 bg-white border-4 border-black shadow-custom-4 hidden">
+                <a href="services.html" class="block px-4 py-3 text-black hover:bg-primary hover:text-white transition-colors font-bold uppercase text-xs">View All Services</a>
+              </div>
+            </li>
+            <li>
+              <a href="contact.html" class="text-black hover:text-primary transition-colors font-bold uppercase text-sm tracking-wide border-b-2 border-primary">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="hidden md:block">
+          <a href="tel:{{PROMPT: Write your phone number}}" class="bg-black text-white px-6 py-3 font-black uppercase text-sm border-4 border-black hover:bg-primary hover:border-primary transition-all shadow-custom-6 hover:shadow-custom-8 transform hover:-translate-y-1">{{PROMPT: Write a high-converting call-to-action (3 words or less).}}</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-black">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden bg-white border-t-4 border-black hidden">
+      <ul class="py-4 px-4 space-y-4">
+        <li>
+          <a href="index.html" class="block text-black font-bold uppercase text-sm py-2 border-l-4 border-transparent hover:border-primary pl-4">Home</a>
+        </li>
+        <li>
+          <a href="services.html" class="block text-black font-bold uppercase text-sm py-2 border-l-4 border-transparent hover:border-primary pl-4">Services</a>
+        </li>
+        <li>
+          <a href="contact.html" class="block text-black font-bold uppercase text-sm py-2 border-l-4 border-transparent hover:border-primary pl-4">Contact</a>
+        </li>
+        <li>
+          <a href="tel:{{PROMPT: Write your phone number}}" class="block bg-black text-white px-6 py-3 font-black uppercase text-sm text-center border-4 border-black shadow-custom-6">{{PROMPT: Write a high-converting call-to-action (3 words or less).}}</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- ===== START: CONTACT HERO ===== -->
+    <section class="relative py-16 md:py-24 overflow-hidden">
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-primary opacity-20 to-accent opacity-20 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-secondary opacity-20 to-accent opacity-20 rounded-full blur-3xl animate-pulse-delay"></div>
+      </div>
+      <div class="container mx-auto px-4 text-center relative z-10">
+        <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-2xl mb-8 shadow-2xl transform hover:scale-110 transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent leading-tight">
+          {{PROMPT: Write H1 for contact page including business name and city.}}
+        </h1>
+        <div class="w-32 h-1.5 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full mb-8"></div>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto font-light mb-10 text-gray-700 leading-relaxed">
+          {{PROMPT: Write hero description emphasizing friendly team, fast help, affordable rates, and free quotes.}}
+        </p>
+        <a href="tel:{{PROMPT: Write your phone number}}" class="inline-flex items-center bg-gradient-to-r from-primary via-accent to-secondary text-white px-10 py-5 rounded-2xl text-lg font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 shadow-xl group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+          </svg>
+          {{PROMPT: Write a high-converting call-to-action (3 words or less).}}
+        </a>
+      </div>
+    </section>
+    <!-- ===== END: CONTACT HERO ===== -->
+
+    <!-- ===== START: QUICK CONTACT OPTIONS ===== -->
+    <section class="py-16 md:py-24 relative">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              {{PROMPT: Write H2 about getting in touch.}}
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              {{PROMPT: Write subtitle.}}
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <!-- Phone CTA - Primary -->
+            <a href="tel:{{PROMPT: Write your phone number}}" class="group relative bg-gradient-to-br from-primary to-accent text-white rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl">
+              <div class="absolute inset-0 bg-white-10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              <div class="relative px-8 py-10">
+                <div class="flex items-center justify-center mb-4">
+                  <div class="w-16 h-16 bg-white-20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-bold text-center mb-2">
+                  {{PROMPT: Write phone CTA headline.}}
+                </h3>
+                <p class="text-white-90 text-center text-sm">
+                  {{PROMPT: Write phone CTA subtitle.}}
+                </p>
+                <div class="mt-6 flex items-center justify-center">
+                  <span class="inline-flex items-center bg-white-20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-semibold">
+                    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-2"></div>
+                    {{PROMPT: Write availability badge.}}
+                  </span>
+                </div>
+              </div>
+            </a>
+            <!-- Email CTA - Secondary -->
+            <a href="mailto:{{PROMPT: Write your email address}}" class="group relative bg-white border-2 border-secondary text-secondary rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl hover:bg-gradient-to-br hover:from-secondary hover:to-primary hover:text-white hover:border-transparent">
+              <div class="absolute inset-0 bg-secondary-10 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-2xl"></div>
+              <div class="relative px-8 py-10">
+                <div class="flex items-center justify-center mb-4">
+                  <div class="w-16 h-16 bg-secondary-10 group-hover:bg-white-20 rounded-2xl flex items-center justify-center transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary group-hover:text-white transition-colors duration-300" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-bold text-center mb-2 group-hover:text-white transition-colors duration-300">
+                  {{PROMPT: Write email CTA headline.}}
+                </h3>
+                <p class="text-gray-600 group-hover:text-white-90 text-center text-sm transition-colors duration-300">
+                  {{PROMPT: Write email CTA subtitle.}}
+                </p>
+                <div class="mt-6 flex items-center justify-center">
+                  <span class="inline-flex items-center bg-secondary-10 group-hover:bg-white-20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    {{PROMPT: Write response time badge.}}
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- Response time note -->
+          <div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-6 border-2 border-primary-20">
+            <div class="flex items-center justify-center">
+              <div class="flex-shrink-0 mr-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+              </div>
+              <p class="text-gray-700 text-lg font-medium">
+                {{PROMPT: Write urgent service note.}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: QUICK CONTACT OPTIONS ===== -->
+
+    <!-- ===== START: CONTACT FORM ===== -->
+    <section class="py-16 md:py-24 relative overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute top-20 right-20 w-72 h-72 bg-primary-10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-20 w-96 h-96 bg-accent-10 rounded-full blur-3xl"></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              {{PROMPT: Write form H2.}}
+            </h2>
+            <p class="text-xl text-gray-700 leading-relaxed">
+              {{PROMPT: Write form description asking for details.}}
+            </p>
+          </div>
+          <form class="bg-white p-10 md:p-12 rounded-3xl shadow-2xl border border-gray-100 backdrop-blur-sm">
+            <div class="space-y-6">
+              <div class="group">
+                <label class="block text-gray-800 font-bold mb-3 text-lg">
+                  {{PROMPT: Write form field label.}}
+                </label>
+                <input type="text" name="name" placeholder="{{PROMPT: Write placeholder.}}" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:border-primary focus:ring-4 focus:outline-none transition-all duration-300 text-lg group-hover:border-gray-300" required>
+              </div>
+              <div class="group">
+                <label class="block text-gray-800 font-bold mb-3 text-lg">
+                  {{PROMPT: Write form field label (e.g., 'Phone Number').}}
+                </label>
+                <input type="tel" name="phone" placeholder="{{PROMPT: Write placeholder (e.g., 'Your phone number').}}" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:border-primary focus:ring-4 focus:outline-none transition-all duration-300 text-lg group-hover:border-gray-300" required>
+              </div>
+              <div class="group">
+                <label class="block text-gray-800 font-bold mb-3 text-lg">
+                  {{PROMPT: Write form field label (e.g., 'Email (optional)').}}
+                </label>
+                <input type="email" name="email" placeholder="{{PROMPT: Write placeholder (e.g., 'Your email address').}}" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:border-primary focus:ring-4 focus:outline-none transition-all duration-300 text-lg group-hover:border-gray-300">
+              </div>
+              <div class="group">
+                <label class="block text-gray-800 font-bold mb-3 text-lg">
+                  {{PROMPT: Write form field label (e.g., 'Service Needed').}}
+                </label>
+                <input type="text" name="service" placeholder="{{PROMPT: Write placeholder (e.g., 'Tow, jump start, tire change, lockout, etc.').}}" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:border-primary focus:ring-4 focus:outline-none transition-all duration-300 text-lg group-hover:border-gray-300" required>
+              </div>
+              <div class="group">
+                <label class="block text-gray-800 font-bold mb-3 text-lg">
+                  {{PROMPT: Write form field label (e.g., 'Location / Address').}}
+                </label>
+                <input type="text" name="location" placeholder="{{PROMPT: Write placeholder (e.g., 'Street address or nearest landmark').}}" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:border-primary focus:ring-4 focus:outline-none transition-all duration-300 text-lg group-hover:border-gray-300" required>
+              </div>
+              <div class="group">
+                <label class="block text-gray-800 font-bold mb-3 text-lg">
+                  {{PROMPT: Write form field label (e.g., 'Notes (optional)').}}
+                </label>
+                <textarea name="notes" rows="4" placeholder="{{PROMPT: Write placeholder (e.g., 'Brief description of your issue').}}" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:border-primary focus:ring-4 focus:outline-none transition-all duration-300 resize-none text-lg group-hover:border-gray-300"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="w-full mt-8 bg-gradient-to-r from-primary via-accent to-secondary text-white px-8 py-5 rounded-2xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group relative overflow-hidden">
+              <div class="absolute inset-0 bg-white-20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              <span class="relative">
+                {{PROMPT: Write submit button text (e.g., 'Submit for Free Quote').}}
+              </span>
+            </button>
+            <p class="text-sm text-gray-600 text-center mt-6 leading-relaxed">
+              {{PROMPT: Write form disclaimer (e.g., 'For emergencies, please call directly. By submitting this form, you consent to be contacted regarding your service request.').}}
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: CONTACT FORM ===== -->
+
+    <!-- ===== START: HOURS ===== -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl md:text-5xl font-bold mb-10 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            {{PROMPT: Write H2 about hours.}}
+          </h2>
+          <div class="bg-white p-10 md:p-12 rounded-3xl shadow-2xl border border-gray-100 relative overflow-hidden group hover:shadow-3xl transition-all duration-300">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-primary-10 rounded-full blur-3xl transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-500"></div>
+            <div class="relative">
+              <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl mb-6 shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <p class="text-xl md:text-2xl text-gray-700 mb-6 leading-relaxed font-medium">
+                {{PROMPT: Write hours description.}}
+              </p>
+              <p class="text-lg md:text-xl text-primary font-bold">
+                {{PROMPT: Write emergency CTA.}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: HOURS ===== -->
+
+    <!-- ===== START: SERVICE AREA ===== -->
+    <section class="py-16 md:py-24">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl md:text-5xl font-bold mb-10 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            {{PROMPT: Write H2 about service area.}}
+          </h2>
+          <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 p-10 md:p-12 relative overflow-hidden group hover:shadow-3xl transition-all duration-300">
+            <div class="absolute bottom-0 left-0 w-40 h-40 bg-accent-10 rounded-full blur-3xl transform -translate-x-20 translate-y-20 group-hover:scale-150 transition-transform duration-500"></div>
+            <div class="relative">
+              <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent to-secondary rounded-2xl mb-6 shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <p class="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
+                {{PROMPT: Write service area description listing main city and surrounding communities/neighborhoods, plus major highways.}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: SERVICE AREA ===== -->
+
+    <!-- ===== START: TRUST HIGHLIGHTS ===== -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          {{PROMPT: Write H2 about why choose you.}}
+        </h2>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all duration-300">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <p class="text-gray-700 leading-relaxed">
+                {{PROMPT: Write benefit 1 emphasizing fast response and same-day service.}}
+              </p>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-accent transition-all duration-300">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-accent to-secondary rounded-xl flex items-center justify-center text-white mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <p class="text-gray-700 leading-relaxed">
+                {{PROMPT: Write benefit 2 emphasizing competitive rates and transparent pricing.}}
+              </p>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-secondary transition-all duration-300">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-secondary to-primary rounded-xl flex items-center justify-center text-white mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <p class="text-gray-700 leading-relaxed">
+                {{PROMPT: Write benefit 3 emphasizing friendly, professional service.}}
+              </p>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all duration-300">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <p class="text-gray-700 leading-relaxed">
+                {{PROMPT: Write benefit 4 emphasizing licensing, insurance, and local ownership.}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: TRUST HIGHLIGHTS ===== -->
+
+    <!-- ===== START: FAQ ===== -->
+    <section class="py-16 md:py-24">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          {{PROMPT: Write H2 about FAQs.}}
+        </h2>
+        <div class="max-w-4xl mx-auto space-y-6">
+          <details class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all duration-300">
+            <summary class="text-xl font-bold text-gray-900 cursor-pointer">
+              {{PROMPT: Write FAQ question 1.}}
+            </summary>
+            <p class="mt-4 text-gray-700 leading-relaxed">
+              {{PROMPT: Write FAQ answer 1 about competitive rates, free quotes, and transparent pricing.}}
+            </p>
+          </details>
+          <details class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-accent transition-all duration-300">
+            <summary class="text-xl font-bold text-gray-900 cursor-pointer">
+              {{PROMPT: Write FAQ question 2.}}
+            </summary>
+            <p class="mt-4 text-gray-700 leading-relaxed">
+              {{PROMPT: Write FAQ answer 2 about response times.}}
+            </p>
+          </details>
+          <details class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-secondary transition-all duration-300">
+            <summary class="text-xl font-bold text-gray-900 cursor-pointer">
+              {{PROMPT: Write FAQ question 3.}}
+            </summary>
+            <p class="mt-4 text-gray-700 leading-relaxed">
+              {{PROMPT: Write FAQ answer 3 about service area.}}
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: FAQ ===== -->
+
+    <!-- ===== START: MAP / DIRECTIONS ===== -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            {{PROMPT: Write H2 about location.}}
+          </h2>
+          <p class="text-xl text-gray-700 mb-10 leading-relaxed">
+            {{PROMPT: Write location description.}}
+          </p>
+          <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 p-8 md:p-10">
+            <div id="map" style="width: 100%; height: 500px;"></div>
+            <div class="mt-8">
+              <p class="text-lg text-gray-700 font-medium">
+                {{PROMPT: Write directions or address information.}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: MAP / DIRECTIONS ===== -->
+
+    <!-- ===== START: FINAL CTA ===== -->
+    <section class="relative py-20 md:py-28 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary"></div>
+      <div class="absolute inset-0 opacity-20">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+      </div>
+      <div class="container mx-auto px-4 text-center relative z-10">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 text-white">
+          {{PROMPT: Write final CTA headline.}}
+        </h2>
+        <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto font-light text-white-90 leading-relaxed">
+          {{PROMPT: Write final CTA description emphasizing fast arrival, affordable rates, and free quotes.}}
+        </p>
+        <a href="tel:{{PROMPT: Write your phone number}}" class="inline-flex items-center bg-white text-primary px-12 py-6 rounded-2xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-110 shadow-xl group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+          </svg>
+          {{PROMPT: Write a high-converting call-to-action (3 words or less).}}
+        </a>
+      </div>
+    </section>
+    <!-- ===== END: FINAL CTA ===== -->
+
+    <!-- ===== START: FOOTER / NAP ===== -->
+    <section class="py-12 bg-gray-50 border-t-2 border-gray-200">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-gray-800 mb-6 leading-relaxed text-lg font-medium">
+          {{PROMPT: Write NAP (Name, Address, Phone) information.}}
+        </p>
+        <p class="text-gray-600">
+          {{PROMPT: Write privacy disclaimer.}}
+        </p>
+      </div>
+    </section>
+    <!-- ===== END: FOOTER / NAP ===== -->
+  </main>
+
+  <!-- Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key={{GOOGLE_MAPS_API_KEY}}&libraries=places"></script>
+  <script>
+      // Initialize Google Map centered on the service city
+      function initMap() {
+          const city = '{{CITY}}';
+          const state = '{{STATE}}';
+          const locationQuery = state ? `${city}, ${state}` : city;
+          
+          // Use Geocoding API to get coordinates for the city
+          const geocoder = new google.maps.Geocoder();
+          
+          geocoder.geocode({ address: locationQuery }, function(results, status) {
+              if (status === 'OK' && results[0]) {
+                  const location = results[0].geometry.location;
+                  
+                  const map = new google.maps.Map(document.getElementById('map'), {
+                      center: location,
+                      zoom: 12,
+                      styles: [
+                          {
+                              featureType: 'poi',
+                              elementType: 'labels',
+                              stylers: [{ visibility: 'off' }]
+                          }
+                      ]
+                  });
+                  
+                  // Add a marker for the city center
+                  new google.maps.Marker({
+                      position: location,
+                      map: map,
+                      title: `Service Area: ${locationQuery}`
+                  });
+              } else {
+                  // Fallback: try to use a default location if geocoding fails
+                  console.warn('Geocoding failed, using default location');
+                  const map = new google.maps.Map(document.getElementById('map'), {
+                      center: { lat: 39.7392, lng: -104.9903 }, // Default to Denver
+                      zoom: 10
+                  });
+              }
+          });
+      }
+      
+      // Initialize map when page loads
+      if (typeof google !== 'undefined' && google.maps) {
+          initMap();
+      } else {
+          // Wait for Google Maps API to load
+          window.addEventListener('load', function() {
+              if (typeof google !== 'undefined' && google.maps) {
+                  initMap();
+              }
+          });
+      }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
+

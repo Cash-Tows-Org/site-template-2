@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{PROMPT: Write your business name.}} - Services</title>
+  <link rel="stylesheet" href="../assets/css/shared.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-white border-b-4 border-black sticky top-0 z-50 shadow-custom-4">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <div class="text-2xl md:text-3xl font-black uppercase tracking-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          {{PROMPT: Write your business name.}}
+        </div>
+        <nav class="hidden md:block">
+          <ul class="flex space-x-8">
+            <li>
+              <a href="index.html" class="text-black hover:text-primary transition-colors font-bold uppercase text-sm tracking-wide border-b-2 border-transparent hover:border-primary">Home</a>
+            </li>
+            <li class="relative" id="services-dropdown">
+              <button id="services-btn" class="text-black hover:text-primary transition-colors font-bold uppercase text-sm tracking-wide flex items-center border-b-2 border-primary">Services
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div id="services-menu" class="absolute top-full left-0 mt-2 w-48 bg-white border-4 border-black shadow-custom-4 hidden">
+                <a href="services.html" class="block px-4 py-3 text-black hover:bg-primary hover:text-white transition-colors font-bold uppercase text-xs">View All Services</a>
+              </div>
+            </li>
+            <li>
+              <a href="contact.html" class="text-black hover:text-primary transition-colors font-bold uppercase text-sm tracking-wide border-b-2 border-transparent hover:border-primary">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="hidden md:block">
+          <a href="tel:{{PROMPT: Write your phone number}}" class="bg-black text-white px-6 py-3 font-black uppercase text-sm border-4 border-black hover:bg-primary hover:border-primary transition-all shadow-custom-6 hover:shadow-custom-8 transform hover:-translate-y-1">{{PROMPT: Write a high-converting call-to-action (3 words or less).}}</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-black">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden bg-white border-t-4 border-black hidden">
+      <ul class="py-4 px-4 space-y-4">
+        <li>
+          <a href="index.html" class="block text-black font-bold uppercase text-sm py-2 border-l-4 border-transparent hover:border-primary pl-4">Home</a>
+        </li>
+        <li>
+          <a href="services.html" class="block text-black font-bold uppercase text-sm py-2 border-l-4 border-transparent hover:border-primary pl-4">Services</a>
+        </li>
+        <li>
+          <a href="contact.html" class="block text-black font-bold uppercase text-sm py-2 border-l-4 border-transparent hover:border-primary pl-4">Contact</a>
+        </li>
+        <li>
+          <a href="tel:{{PROMPT: Write your phone number}}" class="block bg-black text-white px-6 py-3 font-black uppercase text-sm text-center border-4 border-black shadow-custom-6">{{PROMPT: Write a high-converting call-to-action (3 words or less).}}</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- ===== START: HERO SECTION ===== -->
+    <section class="relative min-h-700 flex items-center bg-white overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-full bg-pattern-horizontal opacity-5"></div>
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-black opacity-5 transform skew-x-12"></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl">
+          <div class="inline-block bg-black text-white px-6 py-2 font-black uppercase text-xs tracking-wider mb-8">
+            {{PROMPT: Write a short badge text emphasizing 24/7 availability and fast response.}}
+          </div>
+          <h1 class="text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-none mb-8">
+            {{PROMPT: Write a compelling H1 headline for a towing/roadside assistance services page including the city name. Make it clear, local, and conversion-focused.}}
+          </h1>
+          <div class="w-32 h-2 bg-primary mb-8"></div>
+          <p class="text-2xl md:text-3xl font-bold text-gray-800 leading-tight mb-12">
+            {{PROMPT: Write a compelling 1-2 sentence tagline emphasizing fast, reliable service, affordable rates, and quick response times.}}
+          </p>
+          <a href="tel:{{PROMPT: Write your phone number}}" class="inline-block bg-black text-white px-12 py-6 font-black uppercase text-lg border-4 border-black hover:bg-primary hover:border-primary transition-all shadow-custom-8 hover:shadow-custom-12 transform hover:-translate-x-1 hover:-translate-y-1">
+            {{PROMPT: Write a high-converting call-to-action (3 words or less).}}
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: HERO SECTION ===== -->
+
+    <!-- ===== START: TRUST BAR ===== -->
+    <section class="bg-black text-white py-16 border-t-8 border-primary">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center border-4 border-white p-6">
+              <div class="text-4xl font-black mb-4 text-primary">★</div>
+              <h3 class="font-black uppercase text-sm mb-2">
+                {{PROMPT: Write trust indicator headline 1.}}
+              </h3>
+              <p class="text-xs text-gray-400 uppercase">
+                {{PROMPT: Write trust indicator description 1.}}
+              </p>
+            </div>
+            <div class="text-center border-4 border-white p-6">
+              <div class="text-4xl font-black mb-4 text-accent">$</div>
+              <h3 class="font-black uppercase text-sm mb-2">
+                {{PROMPT: Write trust indicator headline 2.}}
+              </h3>
+              <p class="text-xs text-gray-400 uppercase">
+                {{PROMPT: Write trust indicator description 2.}}
+              </p>
+            </div>
+            <div class="text-center border-4 border-white p-6">
+              <div class="text-4xl font-black mb-4 text-secondary">
+                {{PROMPT: Write trust indicator number or icon.}}
+              </div>
+              <h3 class="font-black uppercase text-sm mb-2">
+                {{PROMPT: Write trust indicator headline 3.}}
+              </h3>
+              <p class="text-xs text-gray-400 uppercase">
+                {{PROMPT: Write trust indicator description 3.}}
+              </p>
+            </div>
+            <div class="text-center border-4 border-white p-6">
+              <div class="text-4xl font-black mb-4 text-primary">
+                {{PROMPT: Write trust indicator icon or symbol.}}
+              </div>
+              <h3 class="font-black uppercase text-sm mb-2">
+                {{PROMPT: Write trust indicator headline 4.}}
+              </h3>
+              <p class="text-xs text-gray-400 uppercase">
+                {{PROMPT: Write trust indicator description 4.}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: TRUST BAR ===== -->
+
+    <!-- ===== START: SERVICE OVERVIEW ===== -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <div class="inline-block bg-black text-white px-6 py-3 font-black uppercase text-sm mb-8">
+              {{PROMPT: Write a section badge label for service overview.}}
+            </div>
+            <h2 class="text-5xl md:text-6xl font-black uppercase mb-6">
+              {{PROMPT: Write an H2 about services offered.}}
+            </h2>
+            <div class="w-32 h-2 bg-primary mx-auto"></div>
+          </div>
+          <div class="bg-gray-50 border-l-8 border-primary p-12">
+            <p class="text-xl md:text-2xl text-gray-800 leading-relaxed font-bold mb-8">
+              {{PROMPT: Write 1-2 paragraphs describing the comprehensive service offering, emphasizing immediate assistance, 24/7 availability, fast response times, fair pricing, and local expertise.}}
+            </p>
+            <div class="text-center pt-8 border-t-4 border-black">
+              <a href="tel:{{PROMPT: Write your phone number}}" class="inline-block bg-black text-white px-10 py-4 font-black uppercase text-sm border-4 border-black hover:bg-primary hover:border-primary transition-all shadow-custom-6">
+                {{PROMPT: Write a high-converting call-to-action (3 words or less).}}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: SERVICE OVERVIEW ===== -->
+
+    <!-- ===== START: WHY CHOOSE US ===== -->
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-5xl md:text-6xl font-black uppercase text-center mb-16">
+          {{PROMPT: Write an H2 about why choose you.}}
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white p-8 border-t-4 border-primary transform hover:-translate-y-2 transition-transform">
+            <div class="w-16 h-16 bg-black text-white flex items-center justify-center mb-6 font-black text-3xl">
+              1
+            </div>
+            <p class="text-gray-800 font-bold leading-relaxed">
+              {{PROMPT: Write one benefit emphasizing experience and professional training.}}
+            </p>
+          </div>
+          <div class="bg-white p-8 border-t-4 border-accent transform hover:-translate-y-2 transition-transform">
+            <div class="w-16 h-16 bg-black text-white flex items-center justify-center mb-6 font-black text-3xl">
+              2
+            </div>
+            <p class="text-gray-800 font-bold leading-relaxed">
+              {{PROMPT: Write one benefit emphasizing fast response times and 24/7 availability.}}
+            </p>
+          </div>
+          <div class="bg-white p-8 border-t-4 border-secondary transform hover:-translate-y-2 transition-transform">
+            <div class="w-16 h-16 bg-black text-white flex items-center justify-center mb-6 font-black text-3xl">
+              3
+            </div>
+            <p class="text-gray-800 font-bold leading-relaxed">
+              {{PROMPT: Write one benefit emphasizing competitive rates and transparent pricing.}}
+            </p>
+          </div>
+          <div class="bg-white p-8 border-t-4 border-primary transform hover:-translate-y-2 transition-transform">
+            <div class="w-16 h-16 bg-black text-white flex items-center justify-center mb-6 font-black text-3xl">
+              4
+            </div>
+            <p class="text-gray-800 font-bold leading-relaxed">
+              {{PROMPT: Write one benefit emphasizing friendly staff and stress-free service.}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: WHY CHOOSE US ===== -->
+
+    <!-- ===== START: SERVICE PROCESS ===== -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <div class="inline-block bg-black text-white px-6 py-3 font-black uppercase text-sm mb-8">
+              {{PROMPT: Write a section badge label for process.}}
+            </div>
+            <h2 class="text-5xl md:text-6xl font-black uppercase mb-6">
+              {{PROMPT: Write an H2 about the service process.}}
+            </h2>
+          <div class="w-32 h-2 bg-primary mx-auto"></div>
+        </div>
+        <div class="max-w-5xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-10 border-t-8 border-primary transform hover:-translate-y-2 transition-transform">
+              <div class="w-16 h-16 bg-black text-white flex items-center justify-center mb-6 font-black text-3xl">
+                1
+              </div>
+              <h3 class="text-xl font-black uppercase mb-4">
+                {{PROMPT: Write step 1 headline.}}
+              </h3>
+              <p class="text-gray-700 font-bold leading-relaxed">
+                {{PROMPT: Write step 1 description about contacting the service.}}
+              </p>
+            </div>
+            <div class="bg-gray-50 p-10 border-t-8 border-accent transform hover:-translate-y-2 transition-transform">
+              <div class="w-16 h-16 bg-black text-white flex items-center justify-center mb-6 font-black text-3xl">
+                2
+              </div>
+              <h3 class="text-xl font-black uppercase mb-4">
+                {{PROMPT: Write step 2 headline.}}
+              </h3>
+              <p class="text-gray-700 font-bold leading-relaxed">
+                {{PROMPT: Write step 2 description about fast arrival and professional service.}}
+              </p>
+            </div>
+            <div class="bg-gray-50 p-10 border-t-8 border-secondary transform hover:-translate-y-2 transition-transform">
+              <div class="w-16 h-16 bg-black text-white flex items-center justify-center mb-6 font-black text-3xl">
+                3
+              </div>
+              <h3 class="text-xl font-black uppercase mb-4">{{PROMPT: Write step 3 headline.}}</h3>
+              <p class="text-gray-700 font-bold leading-relaxed">
+                {{PROMPT: Write step 3 description about completing the service and satisfaction.}}
+              </p>
+            </div>
+          </div>
+          <div class="text-center mt-12">
+            <a href="tel:{{PROMPT: Write your phone number}}" class="inline-block bg-black text-white px-10 py-4 font-black uppercase text-sm border-4 border-black hover:bg-primary hover:border-primary transition-all shadow-custom-6">
+              {{PROMPT: Write a high-converting call-to-action (3 words or less).}}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: SERVICE PROCESS ===== -->
+
+    <!-- ===== START: SERVICE AREA ===== -->
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-5xl md:text-6xl font-black uppercase mb-8">
+            {{PROMPT: Write an H2 about service area.}}
+          </h2>
+          <div class="bg-white border-8 border-black p-12 shadow-custom-8">
+            <p class="text-xl text-gray-800 leading-relaxed font-bold">
+              {{PROMPT: Write a paragraph listing the main city and surrounding areas/neighborhoods served. Include major highways if applicable.}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: SERVICE AREA ===== -->
+
+    <!-- ===== START: TESTIMONIALS ===== -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-5xl md:text-6xl font-black uppercase text-center mb-16">
+          {{PROMPT: Write an H2 about testimonials.}}
+        </h2>
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-gray-50 p-10 border-l-8 border-primary">
+            <div class="flex mb-6">
+              <span class="text-3xl text-yellow-400">★</span>
+              <span class="text-3xl text-yellow-400">★</span>
+              <span class="text-3xl text-yellow-400">★</span>
+              <span class="text-3xl text-yellow-400">★</span>
+              <span class="text-3xl text-yellow-400">★</span>
+            </div>
+            <blockquote class="text-xl font-bold text-gray-800 mb-6 leading-relaxed">
+              {{PROMPT: Write a sample testimonial about professional service, fast response, and getting back on the road quickly.}}
+            </blockquote>
+            <div class="h-1 w-16 bg-black mb-4"></div>
+            <p class="font-black uppercase text-sm text-primary">
+              {{PROMPT: Write a CTA encouraging users to call for their own experience.}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: TESTIMONIALS ===== -->
+
+    <!-- ===== START: ABOUT SECTION ===== -->
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-5xl md:text-6xl font-black uppercase text-center mb-12">
+            {{PROMPT: Write an H2 about the company.}}
+          </h2>
+          <div class="bg-white border-8 border-black p-12 shadow-custom-8">
+            <p class="text-xl text-gray-800 leading-relaxed font-bold">
+              {{PROMPT: Write 1-2 paragraphs about the company's experience, local ownership, reputation, and commitment to customers. Include years of experience and service area.}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: ABOUT SECTION ===== -->
+
+    <!-- ===== START: LOCATION MAP ===== -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-16">
+            <div class="inline-block bg-black text-white px-6 py-3 font-black uppercase text-sm mb-8">
+              {{PROMPT: Write a section badge label for location.}}
+            </div>
+            <h2 class="text-5xl md:text-6xl font-black uppercase mb-6">
+              {{PROMPT: Write an H2 about location/service area.}}
+            </h2>
+            <div class="w-32 h-2 bg-primary mx-auto"></div>
+          </div>
+          <div class="bg-gray-50 border-8 border-black p-8 shadow-custom-12">
+            <div id="map" style="width: 100%; height: 500px;"></div>
+            <div class="mt-8 text-center">
+              <p class="text-xl font-bold text-gray-800 mb-4">
+                {{PROMPT: Write address or service area description.}}
+              </p>
+              <a href="tel:{{PROMPT: Write your phone number}}" class="inline-block bg-black text-white px-10 py-4 font-black uppercase text-sm border-4 border-black hover:bg-primary hover:border-primary transition-all shadow-custom-6">
+                {{PROMPT: Write a high-converting call-to-action (3 words or less).}}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END: LOCATION MAP ===== -->
+
+    <!-- ===== START: FINAL CTA ===== -->
+    <section class="py-20 bg-black text-white border-t-8 border-primary">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-5xl md:text-6xl font-black uppercase mb-6">
+          {{PROMPT: Write a final CTA headline motivating immediate action.}}
+        </h2>
+        <p class="text-2xl mb-10 max-w-3xl mx-auto font-bold">
+          {{PROMPT: Write 1-2 sentences reinforcing fast service, affordability, and 24/7 availability.}}
+        </p>
+        <a href="tel:{{PROMPT: Write your phone number}}" class="inline-block bg-white text-black px-12 py-5 font-black uppercase text-lg border-4 border-white hover:bg-primary hover:border-primary hover:text-white transition-all shadow-custom-8">
+          {{PROMPT: Write a high-converting call-to-action (3 words or less).}}
+        </a>
+      </div>
+    </section>
+    <!-- ===== END: FINAL CTA ===== -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-16 border-t-8 border-primary">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h3 class="text-3xl font-black uppercase mb-6 tracking-tight">
+          {{PROMPT: Write your business name.}}
+        </h3>
+        <div class="inline-block bg-white text-black px-8 py-4 font-bold border-4 border-white mb-4">
+          <p class="text-lg">{{PROMPT: Write your business address.}} | {{PROMPT: Write your business phone number.}}</p>
+        </div>
+        <p class="text-gray-400 uppercase text-sm tracking-wide mt-4">
+          {{PROMPT: Write service area description for footer.}}
+        </p>
+      </div>
+      <div class="max-w-md mx-auto mb-12">
+        <a href="tel:{{PROMPT: Write your phone number}}" class="block bg-white text-black px-8 py-4 font-black uppercase text-sm border-4 border-white hover:bg-accent hover:text-white hover:border-accent transition-all text-center shadow-custom-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-3" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+          </svg>
+          {{PROMPT: Write a high-converting call-to-action (3 words or less).}}
+        </a>
+      </div>
+      <div class="border-t-4 border-gray-800 pt-8 text-center">
+        <p class="text-gray-400 font-bold uppercase text-xs tracking-wider">
+          &copy; <span id="current-year"></span> {{PROMPT: Write your business name.}} All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key={{GOOGLE_MAPS_API_KEY}}&libraries=places"></script>
+  <script>
+      // Initialize Google Map centered on the service city
+      function initMap() {
+          const city = '{{CITY}}';
+          const state = '{{STATE}}';
+          const locationQuery = state ? `${city}, ${state}` : city;
+          
+          // Use Geocoding API to get coordinates for the city
+          const geocoder = new google.maps.Geocoder();
+          
+          geocoder.geocode({ address: locationQuery }, function(results, status) {
+              if (status === 'OK' && results[0]) {
+                  const location = results[0].geometry.location;
+                  
+                  const map = new google.maps.Map(document.getElementById('map'), {
+                      center: location,
+                      zoom: 12,
+                      styles: [
+                          {
+                              featureType: 'poi',
+                              elementType: 'labels',
+                              stylers: [{ visibility: 'off' }]
+                          }
+                      ]
+                  });
+                  
+                  // Add a marker for the city center
+                  new google.maps.Marker({
+                      position: location,
+                      map: map,
+                      title: `Service Area: ${locationQuery}`
+                  });
+              } else {
+                  // Fallback: try to use a default location if geocoding fails
+                  console.warn('Geocoding failed, using default location');
+                  const map = new google.maps.Map(document.getElementById('map'), {
+                      center: { lat: 39.7392, lng: -104.9903 }, // Default to Denver
+                      zoom: 10
+                  });
+              }
+          });
+      }
+      
+      // Initialize map when page loads
+      if (typeof google !== 'undefined' && google.maps) {
+          initMap();
+      } else {
+          // Wait for Google Maps API to load
+          window.addEventListener('load', function() {
+              if (typeof google !== 'undefined' && google.maps) {
+                  initMap();
+              }
+          });
+      }
+  </script>
+  <script src="../script.js"></script>
+</body>
+</html>
+
