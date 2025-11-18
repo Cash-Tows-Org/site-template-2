@@ -1182,3 +1182,22 @@ iframe {
   border: 0;
 }
 
+/* Service Hero Image Responsive Styles */
+.service-hero-image-desktop {
+  display: none;
+}
+
+.service-hero-image-mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .service-hero-image-desktop {
+    display: block;
+  }
+  
+  .service-hero-image-mobile {
+    display: none;
+  }
+}
+
