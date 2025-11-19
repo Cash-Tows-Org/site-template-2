@@ -227,7 +227,8 @@
                 </svg>
               </button>
               <div id="services-menu" class="absolute top-full left-0 mt-2 w-48 bg-white border-4 border-black shadow-custom-4 hidden">
-                <a href="services.html" class="block px-4 py-3 text-black hover:bg-primary hover:text-white transition-colors font-bold uppercase text-xs">View All Services</a>
+                <!-- {{SERVICES_DROPDOWN_LINKS}} -->
+                <!-- The backend will dynamically insert links to all generated service pages here -->
               </div>
             </li>
             <li>
@@ -251,7 +252,11 @@
           <a href="index.html" class="block text-black font-bold uppercase text-sm py-2 border-l-4 border-transparent hover:border-primary pl-4">Home</a>
         </li>
         <li>
-          <a href="services.html" class="block text-black font-bold uppercase text-sm py-2 border-l-4 border-transparent hover:border-primary pl-4">Services</a>
+          <div class="block text-black font-bold uppercase text-sm py-2 pl-4">Services</div>
+          <div class="pl-4 pt-2 space-y-2">
+            <!-- {{SERVICES_MOBILE_LINKS}} -->
+            <!-- The backend will dynamically insert links to all generated service pages here -->
+          </div>
         </li>
         <li>
           <a href="contact.html" class="block text-black font-bold uppercase text-sm py-2 border-l-4 border-transparent hover:border-primary pl-4">Contact</a>
@@ -647,19 +652,140 @@
     </section>
     <!-- ===== END: FINAL CTA ===== -->
 
-    <!-- ===== START: FOOTER / NAP ===== -->
-    <section class="py-12 bg-gray-50 border-t-2 border-gray-200">
-      <div class="container mx-auto px-4 text-center">
-        <p class="text-gray-800 mb-6 leading-relaxed text-lg font-medium">
-          {{BUSINESS_NAME}} | {{MAIN_LOCATION}} | {{PHONE_NUMBER}}
-        </p>
-        <p class="text-gray-600">
-          {{PROMPT: Write privacy disclaimer.}}
-        </p>
-      </div>
-    </section>
-    <!-- ===== END: FOOTER / NAP ===== -->
   </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-16 border-t-8 border-primary">
+    <div class="container mx-auto px-4">
+      <!-- Main Footer Content -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        
+        <!-- Company Info -->
+        <div>
+          <h3 class="text-2xl font-black uppercase mb-6 tracking-tight border-b-4 border-primary pb-2 inline-block">
+            {{BUSINESS_NAME}}
+          </h3>
+          <p class="text-gray-300 leading-relaxed mb-6">
+            {{PROMPT: Write a short footer tagline about your 24/7 availability, fast response, and commitment to customers in {{CITY}}.}}
+          </p>
+          <div class="space-y-3">
+            <a href="tel:{{PHONE_NUMBER}}" class="flex items-center text-white hover:text-primary transition-colors group">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 group-hover:scale-110 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              <span class="font-bold">{{PHONE_NUMBER}}</span>
+            </a>
+            <a href="mailto:{{EMAIL}}" class="flex items-center text-white hover:text-primary transition-colors group">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 group-hover:scale-110 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+              </svg>
+              <span class="font-bold">{{EMAIL}}</span>
+            </a>
+            <div class="flex items-start text-white group">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+              </svg>
+              <span class="font-bold">{{CITY}}, {{STATE}}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-xl font-black uppercase mb-6 tracking-tight border-b-4 border-accent pb-2 inline-block">
+            Quick Links
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="index.html" class="text-gray-300 hover:text-white hover:translate-x-2 inline-block transition-all font-bold uppercase text-sm">
+                → Home
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-gray-300 hover:text-white hover:translate-x-2 inline-block transition-all font-bold uppercase text-sm">
+                → Contact Us
+              </a>
+            </li>
+            <li>
+              <div class="text-gray-300 font-bold uppercase text-sm">→ Our Services:</div>
+              <div class="pl-4 mt-2 space-y-2">
+                <!-- {{SERVICES_FOOTER_LINKS}} -->
+                <!-- The backend will dynamically insert links to all generated service pages here -->
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Service Area & Hours -->
+        <div>
+          <h4 class="text-xl font-black uppercase mb-6 tracking-tight border-b-4 border-secondary pb-2 inline-block">
+            Service Info
+          </h4>
+          <div class="space-y-4">
+            <div>
+              <h5 class="font-black uppercase text-sm text-primary mb-2">Service Area</h5>
+              <p class="text-gray-300 text-sm leading-relaxed">
+                {{PROMPT: Write service area coverage for footer (e.g., 'Serving {{CITY}} and surrounding areas within 30 miles').}}
+              </p>
+            </div>
+            <div>
+              <h5 class="font-black uppercase text-sm text-accent mb-2">Hours</h5>
+              <div class="space-y-1">
+                <p class="text-gray-300 text-sm">
+                  <span class="inline-block bg-primary text-white px-3 py-1 font-black uppercase text-xs">24/7</span>
+                </p>
+                <p class="text-gray-300 text-sm font-bold">
+                  {{PROMPT: Write hours description (e.g., 'Available 24 Hours, 7 Days a Week').}}
+                </p>
+              </div>
+            </div>
+            <div>
+              <h5 class="font-black uppercase text-sm text-secondary mb-2">Payment</h5>
+              <p class="text-gray-300 text-sm">
+                {{PROMPT: Write payment methods accepted (e.g., 'Cash, Credit Cards, Insurance Accepted').}}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div>
+          <h4 class="text-xl font-black uppercase mb-6 tracking-tight border-b-4 border-primary pb-2 inline-block">
+            Need Help Now?
+          </h4>
+          <div class="space-y-4">
+            <p class="text-gray-300 leading-relaxed text-sm">
+              {{PROMPT: Write urgent help footer description emphasizing fast response and immediate availability.}}
+            </p>
+            <a href="tel:{{PHONE_NUMBER}}" class="block bg-primary text-white px-6 py-4 font-black uppercase text-sm border-4 border-primary hover:bg-white hover:text-primary hover:border-white transition-all text-center shadow-custom-6 hover:shadow-custom-8 transform hover:-translate-y-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              Call Now
+            </a>
+            <a href="contact.html" class="block bg-white text-black px-6 py-3 font-black uppercase text-xs border-4 border-white hover:bg-accent hover:text-white hover:border-accent transition-all text-center">
+              Contact Form
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t-4 border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <p class="text-gray-400 font-bold uppercase text-xs tracking-wider text-center md:text-left">
+            &copy; <span id="current-year"></span> {{BUSINESS_NAME}}. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-primary transition-colors font-bold uppercase text-xs">Privacy</a>
+            <a href="#" class="text-gray-400 hover:text-primary transition-colors font-bold uppercase text-xs">Terms</a>
+            <a href="contact.html" class="text-gray-400 hover:text-primary transition-colors font-bold uppercase text-xs">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- Google Maps API -->
   <script src="https://maps.googleapis.com/maps/api/js?key={{GOOGLE_MAPS_API_KEY}}&libraries=places"></script>

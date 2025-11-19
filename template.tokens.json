@@ -104,6 +104,13 @@
       "notes": "Secondary hex color for gradients."
     },
     {
+      "token": "{{SECONDARY_COLOR}}",
+      "source": "free_websites.secondary_color",
+      "required": false,
+      "default": "#F77F00",
+      "notes": "Tertiary hex color for additional accent elements."
+    },
+    {
       "token": "{{YEAR}}",
       "source": "derived",
       "required": true,
@@ -114,6 +121,72 @@
       "source": "settings.google_maps_api_key",
       "required": true,
       "notes": "Google Maps JavaScript API key with Maps JavaScript API and Places API enabled. Used for embedding interactive maps on contact page."
+    },
+    {
+      "token": "{{PHONE_NUMBER}}",
+      "source": "free_websites.customer_phone",
+      "required": true,
+      "notes": "Customer phone number for tel: links throughout the site."
+    },
+    {
+      "token": "{{EMAIL}}",
+      "source": "free_websites.customer_email",
+      "required": true,
+      "notes": "Customer email address for mailto: links."
+    },
+    {
+      "token": "{{CITY}}",
+      "source": "free_websites.service_city",
+      "required": true,
+      "notes": "Primary service city name."
+    },
+    {
+      "token": "{{STATE}}",
+      "source": "free_websites.service_state",
+      "required": true,
+      "notes": "State abbreviation or full name."
+    },
+    {
+      "token": "{{MAIN_LOCATION}}",
+      "source": "derived",
+      "required": true,
+      "notes": "Combined location string (e.g., 'City, State' or full address)."
+    },
+    {
+      "token": "<!-- {{SERVICES_DROPDOWN_LINKS}} -->",
+      "source": "dynamic",
+      "required": true,
+      "notes": "Placeholder for dynamically generated service page links in desktop navigation dropdown. Backend should inject HTML links to all generated service pages here."
+    },
+    {
+      "token": "<!-- {{SERVICES_MOBILE_LINKS}} -->",
+      "source": "dynamic",
+      "required": true,
+      "notes": "Placeholder for dynamically generated service page links in mobile navigation menu. Backend should inject HTML links to all generated service pages here."
+    },
+    {
+      "token": "<!-- {{SERVICES_FOOTER_LINKS}} -->",
+      "source": "dynamic",
+      "required": true,
+      "notes": "Placeholder for dynamically generated service page links in footer services section. Backend should inject HTML links to all generated service pages here."
+    },
+    {
+      "token": "{{SERVICE_NAME}}",
+      "source": "derived",
+      "required": true,
+      "notes": "Name of the specific service for service template pages."
+    },
+    {
+      "token": "{{SERVICE_HERO_PHOTO_URL_DESKTOP}}",
+      "source": "generated",
+      "required": false,
+      "notes": "Desktop hero image URL for specific service page."
+    },
+    {
+      "token": "{{SERVICE_HERO_PHOTO_URL_MOBILE}}",
+      "source": "generated",
+      "required": false,
+      "notes": "Mobile hero image URL for specific service page."
     }
   ]
 }

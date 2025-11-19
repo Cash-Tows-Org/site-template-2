@@ -6,10 +6,17 @@
 }
 
 :root {
-  /* Colors will be set by tokens from shared.css - these are fallbacks only */
+  /* Brand colors - these will be replaced by token replacement system */
   --primary: {{PRIMARY_COLOR}};
   --accent: {{ACCENT_COLOR}};
-  --secondary: {{ACCENT_COLOR}};
+  --secondary: {{SECONDARY_COLOR}};
+  
+  /* Fallback colors if tokens aren't replaced */
+  --primary-fallback: #FF6B35;
+  --accent-fallback: #E63946;
+  --secondary-fallback: #F77F00;
+  
+  /* Grayscale palette */
   --black: #000000;
   --white: #ffffff;
   --gray-50: #f9fafb;
@@ -20,7 +27,10 @@
   --gray-600: #4b5563;
   --gray-700: #374151;
   --gray-800: #1f2937;
+  
+  /* Accent colors */
   --yellow-400: #facc15;
+  --green-400: #4ade80;
 }
 
 body {
