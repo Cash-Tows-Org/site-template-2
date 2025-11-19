@@ -67,20 +67,29 @@
   <main class="flex-grow">
     <!-- ===== START: HERO SECTION ===== -->
     <section class="relative min-h-screen flex items-center bg-white overflow-hidden">
-      <div class="absolute inset-0 bg-pattern-diagonal opacity-5"></div>
-      <div class="container mx-auto px-4 relative z-10">
+      <!-- Background Images -->
+      <div class="absolute inset-0 z-0">
+        <!-- Desktop Image -->
+        <img src="{{HERO_PHOTO_URL}}" alt="Hero background" class="absolute inset-0 w-full h-full object-cover hidden md:block" onerror="this.style.display='none';">
+        <!-- Mobile Image -->
+        <img src="{{HERO_MOBILE_PHOTO_URL}}" alt="Hero background" class="absolute inset-0 w-full h-full object-cover md:hidden" onerror="this.style.display='none';">
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+      </div>
+      <div class="absolute inset-0 bg-pattern-diagonal opacity-5 z-0"></div>
+      <div class="container mx-auto px-4 relative z-20">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div class="space-y-8">
             <div class="inline-block bg-black text-white px-6 py-2 font-black uppercase text-xs tracking-wider border-4 border-black">
               {{PROMPT: Write a short badge text emphasizing 24/7 availability and fast response.}}
             </div>
             <h1 class="text-6xl md:text-7xl lg:text-8xl font-black leading-none uppercase">
-              <span class="block text-black">
+              <span class="block text-white" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">
                 {{PROMPT: Write a compelling H1 headline for a towing/roadside assistance homepage including the city name. Make it clear, local, and conversion-focused. Use different wording than H1s on other pages.}}
               </span>
             </h1>
             <div class="w-32 h-2 bg-primary"></div>
-            <p class="text-xl md:text-2xl text-gray-700 font-bold leading-tight">
+            <p class="text-xl md:text-2xl text-white font-bold leading-tight" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">
               {{PROMPT: Write a compelling 1-2 sentence tagline emphasizing fast, reliable service, affordable rates, and quick response times. Use different phrasing than taglines on other pages.}}
             </p>
             <a href="tel:{{PROMPT: Write your phone number}}" class="inline-block bg-black text-white px-12 py-6 font-black uppercase text-lg border-4 border-black hover:bg-primary hover:border-primary transition-all shadow-custom-8 hover:shadow-custom-12 transform hover:-translate-x-1 hover:-translate-y-1">
@@ -88,26 +97,26 @@
             </a>
             <div class="grid grid-cols-3 gap-6 pt-8">
               <div class="border-l-4 border-primary pl-4">
-                <div class="text-3xl font-black text-black">
+                <div class="text-3xl font-black text-white" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">
                   {{PROMPT: Write a trust indicator label.}}
                 </div>
-                <div class="text-sm font-bold text-gray-600 uppercase">
+                <div class="text-sm font-bold text-white/90 uppercase" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);">
                   {{PROMPT: Write a trust indicator subtitle.}}
                 </div>
               </div>
               <div class="border-l-4 border-accent pl-4">
-                <div class="text-3xl font-black text-black">
+                <div class="text-3xl font-black text-white" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">
                   {{PROMPT: Write average response time.}}
                 </div>
-                <div class="text-sm font-bold text-gray-600 uppercase">
+                <div class="text-sm font-bold text-white/90 uppercase" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);">
                   {{PROMPT: Write response time label.}}
                 </div>
               </div>
               <div class="border-l-4 border-secondary pl-4">
-                <div class="text-3xl font-black text-black">
+                <div class="text-3xl font-black text-white" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">
                   {{PROMPT: Write rating.}}
                 </div>
-                <div class="text-sm font-bold text-gray-600 uppercase">
+                <div class="text-sm font-bold text-white/90 uppercase" style="text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);">
                   {{PROMPT: Write rating label.}}
                 </div>
               </div>
