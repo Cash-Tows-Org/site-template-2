@@ -7,11 +7,12 @@
 
 :root {
   /* Brand colors - these will be replaced by token replacement system */
-  --primary: {{PRIMARY_COLOR}};
-  --accent: {{ACCENT_COLOR}};
-  --secondary: {{SECONDARY_COLOR}};
+  /* Default colors that will be overridden by token replacement or Supabase */
+  --primary: #FF6B35;
+  --accent: #E63946;
+  --secondary: #F77F00;
   
-  /* Fallback colors if tokens aren't replaced */
+  /* Fallback colors if tokens aren't replaced (kept for reference) */
   --primary-fallback: #FF6B35;
   --accent-fallback: #E63946;
   --secondary-fallback: #F77F00;
@@ -148,6 +149,10 @@ body {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -244,6 +249,11 @@ body {
   padding-right: 3rem;
 }
 
+.py-1\.5 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -291,6 +301,14 @@ body {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .mb-2 {
@@ -355,6 +373,11 @@ body {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-lg {
@@ -643,12 +666,28 @@ body {
   position: absolute;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .sticky {
   position: sticky;
 }
 
 .top-0 {
   top: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
 }
 
 .inset-0 {
@@ -677,6 +716,18 @@ body {
 
 .w-1\/2 {
   width: 50%;
+}
+
+.w-2 {
+  width: 0.5rem;
+}
+
+.w-3 {
+  width: 0.75rem;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .w-16 {
@@ -713,6 +764,10 @@ body {
 
 .h-2 {
   height: 0.5rem;
+}
+
+.h-3 {
+  height: 0.75rem;
 }
 
 .h-4 {
@@ -752,12 +807,35 @@ body {
   display: block;
 }
 
+.flex {
+  display: flex;
+}
+
 .inline-block {
   display: inline-block;
 }
 
 .inline-flex {
   display: inline-flex;
+}
+
+/* Responsive Display Classes */
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+  
+  .md\:inline-flex {
+    display: inline-flex;
+  }
+  
+  .md\:block {
+    display: block;
+  }
+  
+  .md\:hidden {
+    display: none;
+  }
 }
 
 /* Overflow */
@@ -847,6 +925,10 @@ body {
 }
 
 /* Custom shadow utilities */
+.shadow-custom-2 {
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+}
+
 .shadow-custom-4 {
   box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
 }
@@ -1015,6 +1097,10 @@ body {
   flex-wrap: wrap;
 }
 
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 /* Max width */
 .max-w-3xl {
   max-width: 48rem;
@@ -1037,6 +1123,10 @@ body {
 }
 
 /* Rounded corners */
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -1061,6 +1151,20 @@ body {
 /* Cursor */
 .cursor-pointer {
   cursor: pointer;
+}
+
+/* Min Width */
+.min-w-\[200px\] {
+  min-width: 200px;
+}
+
+/* Text Utilities */
+.break-all {
+  word-break: break-all;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 
 /* Details/Summary styling */
