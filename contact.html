@@ -13,7 +13,23 @@
       --accent: {{ACCENT_COLOR}};
       --secondary: {{SECONDARY_COLOR}};
     }
+    /* Ensure hero section background covers properly */
+    section[style*="height: 100vh"] .absolute.inset-0 img {
+      object-fit: cover !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
   </style>
+  <script>
+    // Fallback for secondary color if token not replaced
+    (function() {
+      const root = document.documentElement;
+      const secondary = getComputedStyle(root).getPropertyValue('--secondary').trim();
+      if (!secondary || secondary.includes('{{') || secondary === '') {
+        root.style.setProperty('--secondary', '#F77F00');
+      }
+    })();
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -35,9 +51,11 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div id="services-menu" class="absolute top-full left-0 mt-2 w-48 bg-white border-4 border-black shadow-custom-4 hidden">
-                <!-- {{SERVICES_DROPDOWN_LINKS}} -->
-                <!-- The backend will dynamically insert links to all generated service pages here -->
+              <div id="services-menu" class="absolute top-full left-0 mt-2 w-48 bg-white border-4 border-black shadow-custom-4 hidden" style="z-index: 100;">
+                <ul class="py-2">
+                  <!-- {{SERVICES_DROPDOWN_LINKS}} -->
+                  <!-- The backend will dynamically insert links to all generated service pages here -->
+                </ul>
               </div>
             </li>
             <li>
@@ -67,10 +85,10 @@
         </li>
         <li>
           <div class="block text-white font-bold uppercase text-sm py-2 pl-4">Services</div>
-          <div class="pl-4 pt-2 space-y-2">
+          <ul class="pl-4 pt-2 space-y-2">
             <!-- {{SERVICES_MOBILE_LINKS}} -->
             <!-- The backend will dynamically insert links to all generated service pages here -->
-          </div>
+          </ul>
         </li>
         <li>
           <a href="contact.html" class="block text-white font-bold uppercase text-sm py-2 border-l-4 border-transparent hover:border-primary pl-4">Contact</a>
@@ -218,37 +236,37 @@
                   <label class="block text-gray-800 font-black uppercase text-sm mb-3">
                     {{PROMPT: Write form field label.}}
                   </label>
-                  <input type="text" name="name" placeholder="{{PROMPT: Write placeholder.}}" class="w-full px-6 py-4 border-4 border-black bg-white font-bold text-lg focus:border-primary focus:outline-none transition-all" required>
+                  <input type="text" name="name" placeholder="Your full name" class="w-full px-6 py-4 border-4 border-black bg-white font-bold text-lg focus:border-primary focus:outline-none transition-all" required>
                 </div>
                 <div>
                   <label class="block text-gray-800 font-black uppercase text-sm mb-3">
                     {{PROMPT: Write form field label (e.g., 'Phone Number').}}
                   </label>
-                  <input type="tel" name="phone" placeholder="{{PROMPT: Write placeholder (e.g., 'Your phone number').}}" class="w-full px-6 py-4 border-4 border-black bg-white font-bold text-lg focus:border-primary focus:outline-none transition-all" required>
+                  <input type="tel" name="phone" placeholder="Your phone number" class="w-full px-6 py-4 border-4 border-black bg-white font-bold text-lg focus:border-primary focus:outline-none transition-all" required>
                 </div>
                 <div>
                   <label class="block text-gray-800 font-black uppercase text-sm mb-3">
                     {{PROMPT: Write form field label (e.g., 'Email (optional)').}}
                   </label>
-                  <input type="email" name="email" placeholder="{{PROMPT: Write placeholder (e.g., 'Your email address').}}" class="w-full px-6 py-4 border-4 border-black bg-white font-bold text-lg focus:border-primary focus:outline-none transition-all">
+                  <input type="email" name="email" placeholder="Your email address" class="w-full px-6 py-4 border-4 border-black bg-white font-bold text-lg focus:border-primary focus:outline-none transition-all">
                 </div>
                 <div>
                   <label class="block text-gray-800 font-black uppercase text-sm mb-3">
                     {{PROMPT: Write form field label (e.g., 'Service Needed').}}
                   </label>
-                  <input type="text" name="service" placeholder="{{PROMPT: Write placeholder (e.g., 'Tow, jump start, tire change, lockout, etc.').}}" class="w-full px-6 py-4 border-4 border-black bg-white font-bold text-lg focus:border-primary focus:outline-none transition-all" required>
+                  <input type="text" name="service" placeholder="Tow, jump start, tire change, lockout, etc." class="w-full px-6 py-4 border-4 border-black bg-white font-bold text-lg focus:border-primary focus:outline-none transition-all" required>
                 </div>
                 <div>
                   <label class="block text-gray-800 font-black uppercase text-sm mb-3">
                     {{PROMPT: Write form field label (e.g., 'Location / Address').}}
                   </label>
-                  <input type="text" name="location" placeholder="{{PROMPT: Write placeholder (e.g., 'Street address or nearest landmark').}}" class="w-full px-6 py-4 border-4 border-black bg-white font-bold text-lg focus:border-primary focus:outline-none transition-all" required>
+                  <input type="text" name="location" placeholder="Street address or nearest landmark" class="w-full px-6 py-4 border-4 border-black bg-white font-bold text-lg focus:border-primary focus:outline-none transition-all" required>
                 </div>
                 <div>
                   <label class="block text-gray-800 font-black uppercase text-sm mb-3">
                     {{PROMPT: Write form field label (e.g., 'Notes (optional)').}}
                   </label>
-                  <textarea name="notes" rows="4" placeholder="{{PROMPT: Write placeholder (e.g., 'Brief description of your issue').}}" class="w-full px-6 py-4 border-4 border-black bg-white font-bold text-lg focus:border-primary focus:outline-none transition-all resize-none"></textarea>
+                  <textarea name="notes" rows="4" placeholder="Brief description of your issue" class="w-full px-6 py-4 border-4 border-black bg-white font-bold text-lg focus:border-primary focus:outline-none transition-all resize-none"></textarea>
                 </div>
               </div>
               <div class="mt-12 text-center">
