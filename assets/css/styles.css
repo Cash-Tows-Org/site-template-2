@@ -970,6 +970,11 @@ body {
   opacity: 0.2;
 }
 
+/* Hero overlay - darker black overlay */
+.bg-black-overlay-70 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 /* Background patterns */
 .bg-pattern-diagonal {
   background: linear-gradient(45deg, transparent 48%, var(--primary) 48%, var(--primary) 52%, transparent 52%);

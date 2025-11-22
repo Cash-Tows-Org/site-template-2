@@ -207,14 +207,16 @@ Explicitly state "24/7 emergency availability" in relevant fields.
 
 OUTPUT FORMAT
 
-Return JSON keyed by page id ("home", "service-{{slug}}", "contact").
+Return JSON keyed by page ID. The page IDs will be provided in the TEMPLATE_FIELDS section below. You MUST use the EXACT page IDs from TEMPLATE_FIELDS as the top-level keys in your JSON response.
 
-Each value is an object whose keys exactly match the template field identifiers supplied by the bot.
+CRITICAL: The page IDs in your JSON response must exactly match the page IDs shown at the top level of TEMPLATE_FIELDS. Common examples include "index", "contact", "lockout", "fuel-delivery", "roadside-assistance", but always use the exact IDs provided in TEMPLATE_FIELDS.
 
-Example:
+Each page ID maps to an object whose keys exactly match the template field identifiers supplied for that page in TEMPLATE_FIELDS.
+
+Example structure (use the actual page IDs from TEMPLATE_FIELDS):
 
 {
-  "home": {
+  "index": {
     "hero.eyebrow": "...",
     "hero.headline": "...",
     "hero.subheadline": "...",
@@ -222,7 +224,7 @@ Example:
     "hero.secondaryCtaLabel": "...",
     "...": "..."
   },
-  "service-jump-start": {
+  "lockout": {
     "...": "..."
   },
   "contact": {
@@ -230,11 +232,15 @@ Example:
   }
 }
 
+IMPORTANT: You must include ALL page IDs from TEMPLATE_FIELDS in your response. Do not skip any pages.
+
 VALIDATION REQUIREMENTS (DO NOT SKIP)
 
 Before responding, you MUST ensure:
 
-Every field from TEMPLATE_FIELDS exists in your JSON response.
+ALL pages from TEMPLATE_FIELDS are included in your JSON response. Every page ID at the top level of TEMPLATE_FIELDS must appear as a key in your JSON response. Do not skip any pages. If TEMPLATE_FIELDS contains 5 pages, your response must contain all 5 pages.
+
+Every field from TEMPLATE_FIELDS exists in your JSON response for its corresponding page.
 
 No missing keys.
 
@@ -267,3 +273,13 @@ No obvious repeated stock phrases or identical sentences across pages.
 Adjectives and benefit statements are varied per page.
 
 Only after all of the above are satisfied should you output the JSON.
+
+FINAL CHECKLIST:
+1. ✅ Your JSON response includes ALL page IDs from TEMPLATE_FIELDS (check the top-level keys match exactly)
+2. ✅ Each page in your JSON response includes ALL fields for that page from TEMPLATE_FIELDS
+3. ✅ All prompt text has been replaced with final copy (no "Prompt:" wording remains)
+4. ✅ All copy is original and non-repetitive across pages
+5. ✅ All CTAs include {{PHONE}} where specified
+6. ✅ All copy is optimized for conversions and local SEO
+
+If any page is missing or incomplete, your response is invalid and must be regenerated.
